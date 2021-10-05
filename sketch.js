@@ -14,8 +14,6 @@ var img;
 function preload() {
 	eye = loadImage('images/eye.png');
 	nose = loadImage('images/nose.png');
-	leftear = loadImage('images/leftear.png');
-	rightear = loadImage('images/rightear.png');
 	lefthand = loadImage('images/lefthand.png');
 	righthand = loadImage('images/righthand.png');
 }
@@ -56,19 +54,16 @@ function draw() {
 		image(eye, pose.leftEye.x, pose.leftEye.y, 100, 150);
 		image(nose, pose.nose.x, pose.nose.y, 120, 230);
 
-		image(righthand, pose.rightWrist.x, pose.rightWrist.y, 260, 260);
-		image(lefthand, pose.leftWrist.x, pose.leftWrist.y, 260, 260);
+		image(righthand, pose.rightWrist.x, pose.rightWrist.y, 200, 300);
+		image(lefthand, pose.leftWrist.x, pose.leftWrist.y, 200, 300);
 
 		imageMode(CENTER);
 
 		//fill(255, 0, 0);
 		//ellipse(pose.nose.x, pose.nose.y, d);
 		fill(0);
-		ellipse(pose.rightEar.x, pose.rightEar.y, 80);
-		ellipse(pose.leftEar.x, pose.leftEar.y, 80);
-		//image(rightear, pose.rightEar.x, pose.rightEar.y, 100, 120);
-		//image(leftear, pose.leftEar.x, pose.leftEar.y, 100, 120);
-
+		ellipse(pose.rightEar.x, pose.rightEar.y, 70);
+		ellipse(pose.leftEar.x, pose.leftEar.y, 70);
 		for (let i = 0; i < pose.keypoints.length; i++) {
 			let x = pose.keypoints[i].position.x;
 			let y = pose.keypoints[i].position.y;
