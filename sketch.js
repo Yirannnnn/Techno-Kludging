@@ -42,7 +42,7 @@ function modelLoaded() {
 
 function draw() {
 	image(video, 0, 0);
-	background(160, 150, 200);
+	background(170, 220, 220);
 	translate(video.width, 0);
 	//then scale it by -1 in the x-axis to flip the image
 	scale(-1, 1);
